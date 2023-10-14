@@ -1,65 +1,65 @@
-import { getClientConfig } from "../config/client";
-import { SubmitKey } from "../store/config";
+ 从“../config/client”导入{  getClientConfig  } ； 
+ 从“../store/config”导入{  SubmitKey  } ； 
 
-const isApp = !!getClientConfig()?.isApp;
+常量 isApp = !! 获取客户端配置（）？是应用程序；
 
-const cn = {
-  WIP: "该功能仍在开发中……",
-  Error: {
-    Unauthorized: isApp
-      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，关注公众号：创时代人工智能，回复：川哥说ai获取密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
-  },
-  Auth: {
-    Title: "需要密码",
-    Tips: "管理员开启了密码验证，请在下方填入访问码",
-    Input: "在此处填写访问码",
-    Confirm: "确认",
-    Later: "稍后再说",
-  },
-  ChatItem: {
-    ChatItemCount: (count: number) => `${count} 条对话`,
-  },
-  Chat: {
-    SubTitle: (count: number) => `共 ${count} 条对话`,
-    EditMessage: {
-      Title: "编辑消息记录",
-      Topic: {
-        Title: "聊天主题",
-        SubTitle: "更改当前聊天主题",
-      },
-    },
-    Actions: {
-      ChatList: "查看消息列表",
-      CompressedHistory: "查看压缩后的历史 Prompt",
-      Export: "导出聊天记录",
-      Copy: "复制",
-      Stop: "停止",
-      Retry: "重试",
-      Pin: "固定",
-      PinToastContent: "已将 1 条对话固定至预设提示词",
-      PinToastAction: "查看",
-      Delete: "删除",
-      Edit: "编辑",
-    },
-    Commands: {
-      new: "新建聊天",
-      newm: "从面具新建聊天",
-      next: "下一个聊天",
-      prev: "上一个聊天",
-      clear: "清除上下文",
-      del: "删除聊天",
-    },
-    InputActions: {
-      Stop: "停止响应",
-      ToBottom: "滚到最新",
-      Theme: {
-        auto: "自动主题",
-        light: "亮色模式",
-        dark: "深色模式",
-      },
-      Prompt: "快捷指令",
-      Masks: "所有面具",
+常量 cn = {
+  WIP : "该功能即将开发中……" ,
+  错误：{
+    未经授权：isApp
+      ？"检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，海豚AI聊天助手是川哥说AI的知识星球会员的增值服务，加微信cgsai99加入星球会员，免费使用。公众号：创时代人工智能，或者在[设置](/#/settings)页面填入您自己的 OpenAI API 密钥。"面填入您自己的 OpenAI API 轴。" ,
+  } ,} ,
+  授权：{{
+    标题：“需要密码”，
+    温馨提示：“管理员已开启密码验证，请在下方填入访问码”，
+    输入: "在此处填写访问码" ,"在此处填写访问码" ,
+    确认：“确认”，
+    最后：“今晚今晚”，
+  } ,} ,
+  聊天项目：{{
+    ChatItemCount : ( count : number ) => ` ${ count }条对话` ,( count : number ) => ` ${ count }条对话` ,
+  } ,
+  Chat: 
+    字幕：
+    编辑消息：
+      标题：
+      话题：
+        标题：
+        字幕：
+      } ,
+    } ,
+    行动：
+      聊天列表：
+      压缩历史记录：
+      出口：
+      Copy: 
+      停止：
+      重试：
+      别针：
+      PinToast内容：
+      PinToast动作：
+      删除：
+      编辑：
+    } ,
+    命令：
+      new：“新建聊天”，
+      纽姆：
+      下一个：
+      prev: 
+      清除：
+      德尔：
+    } ,
+    输入动作：
+      停止：
+      至底部：
+      主题：
+        汽车：
+        光：
+        黑暗的：
+      } ,
+      迅速的：
+      面具：
       Clear: "清除聊天",
       Settings: "对话设置",
     },
@@ -70,11 +70,11 @@ const cn = {
       if (submitKey === String(SubmitKey.Enter)) {
         inputHints += "，Shift + Enter 换行";
       }
-      return inputHints + "，/ 触发补全，: 触发命令";
-    },
-    Send: "发送",
-    Config: {
-      Reset: "清除记忆",
+      return inputHints + "，/触发补全，:触发命令" ;
+    } ,
+    Send: 
+    Config: 
+      Reset: 
       SaveAs: "存为面具",
     },
     IsContext: "预设提示词",
@@ -235,18 +235,18 @@ const cn = {
       Placeholder: "请输入访问密码",
     },
     Endpoint: {
-      Title: "接口地址",
-      SubTitle: "除默认地址外，必须包含 http(s)://",
-    },
-    CustomModel: {
-      Title: "自定义模型名",
-      SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
-    },
-    Model: "模型 (model)",
-    Temperature: {
-      Title: "随机性 (temperature)",
-      SubTitle: "值越大，回复越随机",
-    },
+      Title: 
+      SubTitle: 
+    } ,
+    CustomModel: 
+      Title: 
+      SubTitle: 
+    } ,
+    Model: 
+    Temperature: 
+      Title: 
+      SubTitle: 
+    } ,
     TopP: {
       Title: "核采样 (top_p)",
       SubTitle: "与随机性类似，但不要和随机性一起更改",
@@ -264,23 +264,23 @@ const cn = {
       SubTitle: "值越大，越有可能降低重复字词",
     },
   },
-  Store: {
-    DefaultTopic: "新的聊天",
-    BotHello: "我是海豚助手，有什么可以帮你的吗",
-    Error: "出错了，稍后重试吧",
-    Prompt: {
-      History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
-      Topic:
-        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回“闲聊”",
-      Summarize:
-        "简要总结一下对话内容，用作后续的上下文提示 prompt，控制在 200 字以内",
-    },
-  },
-  Copy: {
-    Success: "已写入剪切板",
-    Failed: "复制失败，请赋予剪切板权限",
-  },
-  Context: {
+  商店：{
+    默认主题：“新的聊天”，
+    BotHello：“尊敬的GPT创研基地会员，我是海豚AI工作助手，有什么可以帮助您的吗” ,
+    Error: "出错了，稍后重试吧" ,
+    提示：{
+      History: ( content : string ) => "这是历史聊天总结作为前情提要：" + content,
+      话题：
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要浪费文本，如果没有主题，请直接返回“闲聊”" ,
+      总结：
+        “简要总结一下对话内容，首先进行后续的上下文提示，控制在200字以内”，
+    } ,
+  } ,
+  复制：{
+    成功：“已读取测量板”，
+    失败：“复制失败，请授予剪切板权限”，
+  } ,
+  上下文：{
     Toast: (x: any) => `包含 ${x} 条预设提示词`,
     Edit: "当前对话设置",
     Add: "新增一条对话",
@@ -294,50 +294,50 @@ const cn = {
     Name: "面具",
     Page: {
       Title: "预设角色面具",
-      SubTitle: (count: number) => `${count} 个预设角色定义`,
-      Search: "搜索角色面具",
-      Create: "新建",
-    },
-    Item: {
-      Info: (count: number) => `包含 ${count} 条预设对话`,
-      Chat: "对话",
-      View: "查看",
-      Edit: "编辑",
-      Delete: "删除",
-      DeleteConfirm: "确认删除？",
-    },
-    EditModal: {
-      Title: (readonly: boolean) =>
-        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
-      Download: "下载预设",
-      Clone: "克隆预设",
-    },
-    Config: {
-      Avatar: "角色头像",
-      Name: "角色名称",
-      Sync: {
-        Title: "使用全局设置",
-        SubTitle: "当前对话是否使用全局模型设置",
-        Confirm: "当前对话的自定义设置将会被自动覆盖，确认启用全局设置？",
-      },
-      HideContext: {
-        Title: "隐藏预设对话",
-        SubTitle: "隐藏后预设对话不会出现在聊天界面",
-      },
-      Share: {
-        Title: "分享此面具",
-        SubTitle: "生成此面具的直达链接",
-        Action: "复制链接",
-      },
-    },
-  },
-  NewChat: {
-    Return: "返回",
-    Skip: "直接开始",
-    NotShow: "不再展示",
-    ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+      SubTitle: ( count : number ) => ` ${ count }个预设角色定义` ,
+      搜索: "搜索角色面具" ,
+      创建：“新建”，
+    } ,
+    项目：{
+      Info: ( count : number ) => `包含${ count }条预设对话` ,
+      聊天：“对话”，
+      查看：“查看”，
+      编辑：“编辑”，
+      删除：“删除”，
+      DeleteConfirm: "确认删除？" ,
+    } ,
+    编辑模式：{
+      标题：（只读：布尔值） =>
+        `编辑默认面膜${只读？"（庸）" : "" } ` ,
+      下载：“下载默认值”，
+      克隆：“克隆基线”，
+    } ,
+    配置：{
+      头像: "角色头像" ,
+      名称: "角色名称" ,
+      同步：{
+        标题：“使用全局设置”，
+        SubTitle: "当前对话是否使用全局模型设置" ,
+        确认: "当前对话的自定义设置将被自动覆盖，确认实现全局设置？" ,
+      } ,
+      隐藏上下文：{
+        标题：“隐藏预设对话”，
+        副标题：“隐藏后预设对话不会出现在聊天界面”，
+      } ,
+      分享：{
+        标题：“分享此面具”，
+        副标题：“生成此面具的直达链接”，
+        Action: "复制链接" ,
+      } ,
+    } ,
+  } ,
+  新聊天：{
+    返回："返回" ,
+    跳过：“直接开始”，
+    NotShow: "不再展示" ,
+    ConfirmNoShow: "确认取消？取消后可以随时在设置中重新启用。" ,
+    标题：《创作一个面具》，
+    副标题：“现在开始，与面具背后的灵魂思维碰撞”，
     More: "查看全部",
   },
 
